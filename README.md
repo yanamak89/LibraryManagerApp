@@ -29,10 +29,11 @@ Each book has the following attributes:
 - Adding books via a modal form without page reloading.
 
 ## Technologies Used
-- ASP.NET Core MVC
-- Entity Framework Core (for database interactions)
-- Bootstrap (for the user interface)
-- jQuery and AJAX (for modal windows without page reload)
+- ASP.NET Core MVC - As the framework for building the web application.
+- Entity Framework Core - For interacting with the SQL Server database (used in the ApplicationDbContext setup).
+- Bootstrap - For responsive UI and design (located in the project files under the wwwroot folder).
+- jQuery and AJAX - For handling modal windows and form submissions without page reloads, as described in the modal functionality.
+- SQL Server - Used as the database engine, with connection strings configured in the appsettings.json.
 
 ## Expected Outcome
 - The application should allow adding, deleting, and editing authors and books.
