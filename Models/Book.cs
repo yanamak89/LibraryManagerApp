@@ -6,7 +6,7 @@ public class Book
     public int Id { get; set; }
 
     [Required(ErrorMessage = "Назва книги є обов'язковою.")]
-    [RegularExpression(@"^[A-Za-zА-Яа-я\s\W]*(\d{0,2})$", ErrorMessage = "Назва книги може містити тільки літери, символи та не більше двох цифр.")]
+    [RegularExpression(@"^[А-Яа-яЁёЇїІіЄєҐґA-Za-z\s]+$", ErrorMessage = "Назва книги може містити тільки літери.")]
     public string Title { get; set; }
 
     [Required(ErrorMessage = "Кількість сторінок є обов'язковою.")]

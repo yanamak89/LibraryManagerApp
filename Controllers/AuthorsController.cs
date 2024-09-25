@@ -43,8 +43,7 @@ namespace LibraryManagerApp.Controllers
 
         // Створення нового автора (POST)
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,LastName,FirstName,MiddleName,DateOfBirth")] Author author)
+        public async Task<IActionResult> Create(Author author)
         {
             if (ModelState.IsValid)
             {
@@ -68,8 +67,7 @@ namespace LibraryManagerApp.Controllers
 
         // Редагування автора (POST)
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,LastName,FirstName,MiddleName,DateOfBirth")] Author author)
+        public async Task<IActionResult> Edit(int id, Author author)
         {
             if (id != author.Id) return NotFound();
 

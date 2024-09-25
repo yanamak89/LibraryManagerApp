@@ -45,8 +45,7 @@ public class BooksController : Controller
 
 // Створення нової книги (POST)
     [HttpPost]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("Id,Title,Pages,Genre,AuthorId")] Book book)
+    public async Task<IActionResult> Create(Book book)
     {
         if (ModelState.IsValid)
         {
@@ -73,7 +72,7 @@ public class BooksController : Controller
     // Редагування книги (POST)
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Pages,Genre,AuthorId")] Book book)
+    public async Task<IActionResult> Edit(int id, Book book)
     {
         if (id != book.Id) return NotFound();
 
