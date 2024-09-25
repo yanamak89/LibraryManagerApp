@@ -134,3 +134,4 @@
 /Users/yanamakogon/Documents/net developer/c#/LibraryManagerApp/obj/Debug/net8.0/LibraryManagerApp.pdb
 /Users/yanamakogon/Documents/net developer/c#/LibraryManagerApp/obj/Debug/net8.0/LibraryManagerApp.genruntimeconfig.cache
 /Users/yanamakogon/Documents/net developer/c#/LibraryManagerApp/obj/Debug/net8.0/ref/LibraryManagerApp.dll
+/Users/yanamakogon/Documents/net developer/c#/LibraryManagerApp/obj/Debug/net8.0/LibraryManagerApp.sourcelink.json
