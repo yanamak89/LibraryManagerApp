@@ -1,0 +1,32 @@
+@model LibraryManagerApp.Models.Book
+
+<h2>Видалити книгу</h2>
+
+<h3>Ви впевнені, що хочете видалити цю книгу?</h3>
+<div>
+    <h4>Книга</h4>
+    <hr/>
+    <dl class="row">
+        <dt class="col-sm-2">Назва</dt>
+        <dd class="col-sm-10">@Model.Title</dd>
+
+        <dt class="col-sm-2">Кількість сторінок</dt>
+        <dd class="col-sm-10">@Model.Pages</dd>
+
+        <dt class="col-sm-2">Жанр</dt>
+        <dd class="col-sm-10">@Model.Genre</dd>
+
+        <dt class="col-sm-2">Автор</dt>
+        <dd class="col-sm-10">@Model.Author.LastName</dd>
+    </dl>
+    
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="Id"/>
+        <button type="submit" class="btn btn-danger">Видалити</button>
+        <a asp-action="Index" class="btn btn-secondary">Скасувати</a>
+    </form>
+</div>
+
+@section Scripts{
+    <partial name = "_ValidationScriptsPartial"/>
+}

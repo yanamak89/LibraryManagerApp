@@ -1,0 +1,31 @@
+@model LibraryManagerApp.Models.Author
+
+<h2>Додати нового автора</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Призвище</label>
+        <input asp-for="LastName" />
+        <span asp-validation-for="LastName"></span>
+    </div>
+    <div>
+        <label>Ім'я</label>
+        <input asp-for="FirstName" />
+        <span asp-validation-for="FirstName"></span>
+    </div>
+    <div>
+        <label>По-батькові</label>
+        <input asp-for="MiddleName" />
+        <span asp-validation-for="MiddleName"></span>
+    </div>
+    <div>
+        <label>Дата народження</label>
+        <input asp-for="DateOfBirth" type="date"/>
+        <span asp-validation-for="DateOfBirth"></span>
+    </div>
+    <button type="submit">Зберігти</button>
+</form>
+
+@section Scripts{
+    <partial name = "_ValidationScriptsPartial"/>
+}

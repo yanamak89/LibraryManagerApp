@@ -1,0 +1,31 @@
+@model LibraryManagerApp.Models.Author
+
+<h2>Видалення автора</h2>
+<h3>Ви впервнені, що хочете видалити цього автора?</h3>
+
+<div>
+    <h4>Автор</h4>
+    <dl class="row">
+        <dt class = "col-sm-2">Прізвище</dt>
+        <dd class = col-sm-10>@Model.LastName</dd>
+        
+        <dt class = "col-sm-2">Ім'я</dt>
+        <dd class = col-sm-10>@Model.FirstName</dd>
+        
+        <dt class = "col-sm-2">По батькові</dt> 
+        <dd class = col-sm-10>@Model.MiddleName</dd>
+        
+        <dt class = "col-sm-2">Дата народження</dt>
+        <dd class = col-sm-10>@Model.DateOfBirth.ToString("dd/MM/yyyy")</dd>
+    </dl>
+    
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="Id"/>
+        <button type="submit" class="btn btn-danger">Видалити</button>
+        <a asp-action="Index" class="btn btn-secondary">Скасувати</a>
+    </form>
+</div>
+
+@section Scripts{
+    <partial name = "_ValidationScriptsPartial"/>
+}

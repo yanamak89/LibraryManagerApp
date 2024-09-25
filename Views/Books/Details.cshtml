@@ -1,0 +1,27 @@
+@model LibraryManagerApp.Models.Book
+
+<h2>Деталі книги</h2>
+
+<div>
+    <hr/>
+    <dl class="row">
+        <dt class="col-sm-2">Назва</dt>
+        <dd class="col-sm-10">@Model.Title</dd>
+        
+        <dt class="col-sm-2">Кількість сторінок</dt>
+        <dd class="col-sm-10">@Model.Pages</dd>
+        
+        <dt class="col-sm-2">Жанр</dt>
+        <dd class="col-sm-10">@Model.Genre</dd>
+
+        <dt class="col-sm-2">Автор</dt>
+        <dd class="col-sm-10">@Model.Author.LastName</dd>
+    </dl>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Редагувати</a> |
+<a asp-action="Index" class="btn btn-secondary">Повернутись до списку</a>
+
+@section Scripts{
+    <partial name = "_ValidationScriptsPartial"/>
+}

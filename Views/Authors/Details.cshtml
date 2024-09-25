@@ -1,0 +1,30 @@
+@model LibraryManagerApp.Models.Author
+
+
+<h4>Книги автора</h4>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Назва</th>
+        <th>Кількість сторінок</th>
+        <th>Жанр</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var book in Model.Books)
+    {
+        <tr>
+            <td>@book.Title</td>
+            <td>@book.Pages</td>
+            <td>@book.Genre</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Редагувати</a> |
+<a asp-action="Index" class="btn btn-primary">Повернутись до списку</a>
+
+@section Scripts{
+    <partial name = "_ValidationScriptsPartial"/>
+}
